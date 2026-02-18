@@ -61,7 +61,7 @@ while cap.isOpened():
     rgb_img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
     mp_image = mp.Image(image_format=mp.ImageFormat.SRGB, data=rgb_img)
 
-    timestamp_ms = int(time.time() * 1000) + 1
+    timestamp_ms = int(time.time() * 1000)
     landmarker.detect_async(mp_image, timestamp_ms)
     HandLandmarker.timespamp_ms = timestamp_ms
 
